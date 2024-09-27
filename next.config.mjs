@@ -2,6 +2,7 @@
 
 const nextConfig = {
   output: 'export', // Enables static export mode
+  distDir: 'export',
   trailingSlash: true, // Adds trailing slash to all routes
   images: {
     unoptimized: true, // Disable image optimization for GitHub Pages
