@@ -19,6 +19,7 @@ export function Header() {
   ];
 
   const [isOpen, setOpen] = useState<boolean>(false);
+  
   return (
     <motion.header
       initial="hidden"
@@ -27,7 +28,7 @@ export function Header() {
       custom={1.2}
       className="w-full z-20 absolute top-0 left-0 overflow-hidden md:py-6 py-2"
     >
-      <nav className="flex px-2 items-center  justify-between w-full max-w-screen-xl mx-auto">
+      <nav className="flex px-2 items-center justify-between w-full max-w-screen-xl mx-auto">
         <div className=" self-center">
           {/* <Logo /> */}
         </div>
