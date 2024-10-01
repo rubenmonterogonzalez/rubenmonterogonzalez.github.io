@@ -2,9 +2,10 @@
 
 import { slideToLeft } from "@/helpers/animations";
 import { motion } from "framer-motion";
-import styles from "../styles/hero.module.css";
+import React from "react";
+import styles from "@/styles/heading.module.css";
 
-export function Hero({ header, stroke }: { header: string, stroke: boolean }) {
+export function Heading({ heading, stroke }: { heading: string; stroke?: boolean }) {
   return (
     <h1 className="sm:text-7xl text-5xl font-main font-black uppercase mb-12">
       <motion.span
@@ -25,9 +26,9 @@ export function Hero({ header, stroke }: { header: string, stroke: boolean }) {
         animate="visible"
         variants={slideToLeft}
         custom={0.5}
-        className={`inline-block dark:text-gray-100 ${stroke && styles.stroke}`}
+        className={`inline-block ${stroke && styles.stroke} dark:text-white font-black font-main text-black`}
       >
-        {header}
+        {heading}
       </motion.span>
     </h1>
   );

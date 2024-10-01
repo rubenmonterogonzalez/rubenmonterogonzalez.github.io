@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import "@/styles/globals.css";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import NProgressProvider from "@/providers/NProgressProvider";
 import { Header } from "@/components/Header";
-import { Particles } from "@/helpers/particles";
+import Toaster from "@/components/Toaster";
+import '@/styles/globals.css';
 
 export const metadata: Metadata = {
-  title: "Ruben Montero - Sofware Developer",
+  title: "Ruben Montero",
   description: "Ruben Montero portfolio's, a software developer based in Malta.",
   keywords: ["Ruben Montero", "Software Developer", "Malta"],
 };
@@ -24,11 +24,9 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <NProgressProvider>
-            <Particles
-              className="absolute inset-0 z-10 animate-fade-in"
-            />
             <Header />
             {children}
+            <Toaster />
           </NProgressProvider>
         </ThemeProvider>
       </body>

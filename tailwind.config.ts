@@ -10,14 +10,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#f7e018",
+        'dark-theme': "#000",
+        'dark-gray': "#313538"
       },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+      gridTemplateColumns: {
+        'auto-1': ' repeat(1, minmax(0, auto))',
+        'auto-2': ' repeat(2, minmax(0, auto))',
+      }
+    },
+  },
+  variants: {
+    extend: {
+      opacity: ['disabled'],
+      cursor: ['disabled'],
     },
   },
   plugins: [],

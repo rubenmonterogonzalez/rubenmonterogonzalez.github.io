@@ -18,7 +18,7 @@ export function ThemeSwitcher() {
         title='Toggle theme'
         className="theme-toggle-button"
       >
-        {theme === 'light' ? <IconMoon /> : <IconSun />}
+        {theme === 'light' ? <IconMoon color={'black'}/> : <IconSun />}
       </button>
     </div>
   )

@@ -7,19 +7,21 @@ import { Spin as Hamburger } from "hamburger-react";
 import { useState } from "react";
 import { Shape } from "./Shape";
 import { ThemeSwitcher } from "./Theme-Switcher";
-import { IconAddressBook, IconCode, IconHome, IconLetterA } from "@tabler/icons-react";
+import { IconAddressBook, IconCode, IconHome, IconLego, IconMail } from "@tabler/icons-react";
+import { useTheme } from "next-themes";
 
 export function Header() {
   const routes = [
-    { link: "/", name: "home", icon: <IconHome /> },
-    { link: "/work", name: "work", icon: <IconCode /> },
-    { link: "/about", name: "about", icon: <IconAddressBook /> },
-    { link: "/blog", name: "blog", icon: <IconAddressBook /> },
-    { link: "/contact", name: "contact", icon: <IconLetterA /> },
+    { link: "/", name: "home", icon: <IconHome style={{ margin: 'auto' }} /> },
+    { link: "/work", name: "work", icon: <IconCode style={{ margin: 'auto' }} /> },
+    { link: "/about", name: "about", icon: <IconLego style={{ margin: 'auto' }} /> },
+    { link: "/blog", name: "blog", icon: <IconAddressBook style={{ margin: 'auto' }} /> },
+    { link: "/contact", name: "contact", icon: <IconMail style={{ margin: 'auto' }} /> },
   ];
 
   const [isOpen, setOpen] = useState<boolean>(false);
-  
+  const { theme, setTheme } = useTheme();
+
   return (
     <motion.header
       initial="hidden"
@@ -27,6 +29,7 @@ export function Header() {
       variants={slideDown}
       custom={1.2}
       className="w-full z-20 absolute top-0 left-0 overflow-hidden md:py-6 py-2"
+      style={{ willChange: 'auto' }}
     >
       <nav className="flex px-2 items-center justify-between w-full max-w-screen-xl mx-auto">
         <div className=" self-center">
@@ -35,7 +38,7 @@ export function Header() {
 
         <ul className="md:flex hidden space-x-6 items-center text-xl font-main capitalize">
           {routes.map((route, index) => (
-            <li key={`${route.name}-${index}`} className="dark:text-gray-100 px-2">
+            <li key={`${route.name}-${index}`} className="dark:text-white text-black px-2">
               <Link href={route.link}>
                 {route.name}
               </Link>
@@ -43,14 +46,15 @@ export function Header() {
           ))}
           <ThemeSwitcher />
         </ul>
-        <div className="flex items-center md:hidden relative z-40 self-center ">
+        <div className="flex items-center md:hidden relative z-40 self-center">
           <ThemeSwitcher />
           <Hamburger
             toggled={isOpen}
             toggle={setOpen}
-          // color={`${darkTheme ? "#06fbce" : "#000"}`}
+            color={theme === "light" ? "#000" : "#f7e018" || "#000"}
           />
         </div>
+
         <ul
           className={`
         ${isOpen ? "translate-x-0" : "translate-x-full"}
@@ -58,8 +62,8 @@ export function Header() {
         >
           {routes.map((route, index) => (
             <li key={`${route.name}-${index}`} onClick={() => setOpen(false)}>
-              <Link href={route.link} className="hover:text-primary text-gray-400 dark:text-gray-300 text-sm font-main capitalize">
-                <span className="block mb-2 w-8 h-8 mx-auto text-xl">
+              <Link href={route.link} className="hover:text-primary text-black dark:text-white text-sm font-main capitalize">
+                <span className="block w-8 h-8 mx-auto text-xl">
                   {route.icon}
                 </span>
                 <span className="text-sm">{route.name}</span>

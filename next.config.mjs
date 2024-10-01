@@ -7,7 +7,7 @@ const nextConfig = {
     unoptimized: true, // Disable image optimization for GitHub Pages
   },
   basePath: '', // Optional: Adjust if you're using a subpath in your repository
-  assetPrefix: './', // Use relative paths for assets
+  // assetPrefix: './', // Use relative paths for assets
 };
 
 export default nextConfig;

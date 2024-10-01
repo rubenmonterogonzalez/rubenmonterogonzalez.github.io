@@ -2,11 +2,10 @@
 
 import { useEffect, useRef } from 'react';
 import NProgress from 'nprogress';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 export default function NProgressProvider({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
   const previousPathname = useRef(pathname);
   const nProgressStarted = useRef(false);
 
@@ -41,7 +40,7 @@ export default function NProgressProvider({ children }: { children: React.ReactN
       NProgress.done();
       nProgressStarted.current = false;
     };
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   return <>{children}</>;
 }
