@@ -51,7 +51,7 @@ export function Header() {
           <Hamburger
             toggled={isOpen}
             toggle={setOpen}
-            color={theme === "light" ? "#000" : "#f7e018" || "#000"}
+            color={theme === "light" ? "#000" : "#f7e018"}
           />
         </div>
 
