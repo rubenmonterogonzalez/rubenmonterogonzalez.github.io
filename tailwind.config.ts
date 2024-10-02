@@ -17,7 +17,10 @@ const config: Config = {
       gridTemplateColumns: {
         'auto-1': ' repeat(1, minmax(0, auto))',
         'auto-2': ' repeat(2, minmax(0, auto))',
-      }
+      },
+      screens: {
+        'xs': '480px',
+      },
     },
   },
   variants: {

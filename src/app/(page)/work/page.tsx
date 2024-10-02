@@ -18,25 +18,31 @@ export default function Work() {
           initial="hidden"
           animate="visible"
           variants={list}
-          className="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3"
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 gap-y-16"
         >
           {projects.map(({ id, name, img, linkToPage }) => (
             <motion.div variants={itemSlideUp} key={id}>
-              <Link href={`/details/${id}`}>
-                <Image
-                  src={img}
-                  width={345}
-                  height={216}
-                  layout="responsive"
-                  className="rounded"
-                  alt="work"
-                />
+              <Link
+                href={linkToPage}
+                rel="noopener noreferrer"
+                target="_blank"
+                className="relative"
+              >
+                <div className="relative w-full h-40 xs:h-60 sm:h-72 lg:h-50 xl:h-40">
+                  <Image
+                    src={img}
+                    fill
+                    className="rounded-md"
+                    alt={`${name}`}
+                    priority
+                  />
+                </div>
               </Link>
               <div className="mt-4 flex justify-between items-center">
-                <h4 className="font-main text-md font-bold capitalize dark:text-gray-100">
+                <h4 className="font-main text-md font-bold capitalize dark:text-white text-black">
                   {name}
                 </h4>
-                <div className="flex space-x-4 dark:text-gray-100">
+                <div className="flex space-x-4 dark:text-white text-black">
                   <Link
                     href={linkToPage}
                     rel="noopener noreferrer"

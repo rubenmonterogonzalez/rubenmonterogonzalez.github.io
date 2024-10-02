@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Ruben Montero",
   description: "Ruben Montero portfolio's, a software developer based in Malta.",
   keywords: ["Ruben Montero", "Software Developer", "Malta"],
+  icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
 export default function RootLayout({
