@@ -20,7 +20,7 @@ export function Header() {
   ];
 
   const [isOpen, setOpen] = useState<boolean>(false);
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <motion.header
