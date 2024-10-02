@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[854],{6040:function(n,t,e){Promise.resolve().then(e.bind(e,2548))},2548:function(n,t,e){"use strict";e.r(t),e.d(t,{default:function(){return r}});var u=e(7437);function r(){return(0,u.jsx)(u.Fragment,{children:"Contact"})}}},function(n){n.O(0,[971,23,744],function(){return n(n.s=6040)}),_N_E=n.O()}]);
