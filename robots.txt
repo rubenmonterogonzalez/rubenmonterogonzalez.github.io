@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rubenmonterogonzalez.github.io/sitemap.xml
