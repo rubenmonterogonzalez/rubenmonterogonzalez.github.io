@@ -6,9 +6,12 @@ import Toaster from "@/components/Toaster";
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
-  title: "Ruben Montero",
-  description: "Ruben Montero portfolio's, a software developer based in Malta.",
-  keywords: ["Ruben Montero", "Software Developer", "Malta"],
+  title: {
+    default: "Ruben Montero - Frontend Developer",
+    template: "%s | Ruben Montero",
+  },
+  description: "Portfolio of Ruben Montero, a software developer based in Malta.",
+  keywords: ["Ruben Montero", "Full Stack Developer", "Frontend", "Backend", "Web Development"],
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
