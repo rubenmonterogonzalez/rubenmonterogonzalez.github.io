@@ -23,3 +23,15 @@ export type Circle = {
   dy: number;
   magnetism: number;
 };
+
+export interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+export interface Errors {
+  name: string;
+  email: string;
+  message: string;
+}

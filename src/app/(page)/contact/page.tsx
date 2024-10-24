@@ -6,18 +6,7 @@ import { IconBrandGithub, IconBrandLinkedin, IconMail, IconMapPin, IconPhone } f
 import { motion } from "framer-motion";
 import { useState } from "react";
 import toast from "react-hot-toast";
-
-interface FormData {
-  name: string;
-  email: string;
-  message: string;
-}
-
-interface Errors {
-  name: string;
-  email: string;
-  message: string;
-}
+import { Errors, FormData } from "@/types";
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' } as FormData);
@@ -163,12 +152,12 @@ export default function Contact() {
               variants={list}
               className="mb-6"
             >
-              <motion.h3
+              <motion.h2
                 variants={item}
                 className="text-2xl font-main font-bold mb-4 capitalize dark:text-white text-black"
               >
                 Contact info :
-              </motion.h3>
+              </motion.h2>
 
               <motion.div
                 variants={item}
@@ -195,12 +184,12 @@ export default function Contact() {
               </motion.div>
             </motion.div>
             <motion.div initial="hidden" animate="visible" variants={list}>
-              <motion.h3
+              <motion.h2
                 variants={item}
                 className="text-2xl font-main font-bold mb-4 capitalize dark:text-white text-black"
               >
                 Social Networks :
-              </motion.h3>
+              </motion.h2>
               <motion.div
                 initial="hidden"
                 animate="visible"
@@ -208,6 +197,7 @@ export default function Contact() {
                 className="flex space-x-10 text-lg items-center text-gray-700"
               >
                 <motion.a
+                  aria-label="LinkedIn"
                   variants={itemSlideUp}
                   className="hover:text-primary dark:text-primary"
                   rel="noopener noreferrer"
@@ -217,6 +207,7 @@ export default function Contact() {
                   <IconBrandLinkedin className="w-4 h-4" />
                 </motion.a>
                 <motion.a
+                  aria-label="Github"
                   variants={itemSlideUp}
                   className="hover:text-primary dark:text-primary"
                   rel="noopener noreferrer"

@@ -28,7 +28,7 @@ export default function About() {
           initial="hidden"
           animate="visible"
           variants={slideDown}
-          className="sm:text-7xl text-5xl font-main dark:text-white text-black font-black uppercase mb-12 xl:mb-0"
+          className="sm:text-7xl text-5xl font-main dark:text-white text-black font-black uppercase mb-12 xl:mb-0 will-change-transform"
         >
           About <br />
           <motion.span
@@ -59,7 +59,7 @@ export default function About() {
             <br />
             Driven by a personal goal of constant improvement, not just in his professional work but in all areas of life, Ruben is always looking to master new technologies, optimize web applications, and enhance his personal growth. He believes in pushing boundaries to achieve better results every day. His aim is to deliver applications that are both visually appealing and technically sound, ensuring an optimal experience for all users.
           </motion.p>
-          <motion.h3
+          <motion.h2
             initial="hidden"
             animate="visible"
             variants={slideUp}
@@ -67,12 +67,12 @@ export default function About() {
             className="text-3xl font-main font-black uppercase mb-6 dark:text-white text-black"
           >
             Skills :
-          </motion.h3>
+          </motion.h2>
           <motion.ul
             initial="hidden"
             animate="visible"
             variants={list}
-            className="relative z-20 grid md:grid-cols-3 grid-cols-2 max-w-screen-md gap-4 "
+            className="relative z-20 grid md:grid-cols-3 grid-cols-2 max-w-screen-md gap-4 pb-8 sm:pb-0"
           >
             {skills.map((skill, i) => (
               <motion.li

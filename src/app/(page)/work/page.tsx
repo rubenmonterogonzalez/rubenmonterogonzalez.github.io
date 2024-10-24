@@ -32,19 +32,19 @@ export default function Work() {
                   <Image
                     src={img}
                     fill
-                    className="rounded-md"
+                    className="rounded-md object-cover"
                     alt={`${name}`}
-                    priority
                     loading="lazy"
                   />
                 </div>
               </Link>
               <div className="mt-4 flex justify-between items-center">
-                <h4 className="font-main text-md font-bold capitalize dark:text-white text-black">
+                <h2 className="font-main text-md font-bold capitalize dark:text-white text-black">
                   {name}
-                </h4>
+                </h2>
                 <div className="flex space-x-4 dark:text-white text-black">
                   <Link
+                    aria-label="External Link"
                     href={linkToPage}
                     rel="noopener noreferrer"
                     target="_blank"

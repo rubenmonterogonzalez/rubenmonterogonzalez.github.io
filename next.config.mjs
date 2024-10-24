@@ -1,13 +1,17 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  output: 'export', // Enables static export mode
-  trailingSlash: true, // Adds trailing slash to all routes
+  output: 'export',
+  trailingSlash: true,
   images: {
-    unoptimized: true, // Disable image optimization for GitHub Pages
+    unoptimized: true,
   },
-  basePath: '', // Optional: Adjust if you're using a subpath in your repository
-  // assetPrefix: './', // Use relative paths for assets
+  basePath: '',
+  productionBrowserSourceMaps: true,
+  webpack(config) {
+    config.devtool = 'source-map'; // Puedes cambiar el tipo de mapa aquí
+    return config;
+  }
 };
 
 export default nextConfig;
