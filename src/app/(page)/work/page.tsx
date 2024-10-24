@@ -35,6 +35,7 @@ export default function Work() {
                     className="rounded-md"
                     alt={`${name}`}
                     priority
+                    loading="lazy"
                   />
                 </div>
               </Link>

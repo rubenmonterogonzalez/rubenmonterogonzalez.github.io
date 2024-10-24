@@ -1,7 +1,3 @@
-body.dark .theme {
-  filter: invert(1);
-}
-
 .btn::before {
   content: "";
   position: absolute;

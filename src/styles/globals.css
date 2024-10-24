@@ -57,3 +57,7 @@ body {
 #nprogress .spinner {
   display: none !important;
 }
+
+body.dark .theme {
+  filter: invert(1);
+}
