@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://_N_E/src/styles/heading.module.css"],"names":[],"mappings":"AAAA,uBACE,+BAAgC,CAChC,6BACF","file":"static/css/d0760acd587a365a.css","sourcesContent":[".stroke {\r\n  -webkit-text-stroke: 3px #f7e018;\r\n  -webkit-text-fill-color: transparent;\r\n}"],"sourceRoot":""}
