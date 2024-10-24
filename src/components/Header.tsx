@@ -36,23 +36,33 @@ export function Header() {
           {/* <Logo /> */}
         </div>
 
-        <ul className="md:flex hidden space-x-6 items-center text-xl font-main capitalize">
-          {routes.map((route, index) => (
-            <li key={`${route.name}-${index}`} className="dark:text-white text-black px-2">
-              <Link href={route.link}>
-                {route.name}
-              </Link>
-            </li>
-          ))}
+        <div className="md:flex hidden">
+          <ul className="md:flex hidden space-x-6 items-center text-xl font-main capitalize">
+            {routes.map((route, index) => (
+              <li key={`${route.name}-${index}`} className="dark:text-white text-black px-2">
+                <Link href={route.link}>
+                  {route.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
           <ThemeSwitcher />
-        </ul>
+        </div>
         <div className="flex items-center md:hidden relative z-40 self-center">
           <ThemeSwitcher />
-          <Hamburger
-            toggled={isOpen}
-            toggle={setOpen}
-            color={theme === "light" ? "#000" : "#f7e018"}
-          />
+          <button
+            role="button"
+            onClick={() => setOpen(!isOpen)}
+            aria-label={isOpen ? "Close burger menu" : "Open burger menu"}
+            aria-expanded={isOpen}
+            className="bg-transparent border-none p-0 cursor-pointer"
+          >
+            <Hamburger
+              toggled={isOpen}
+              toggle={setOpen}
+              color={theme === "light" ? "#000" : "#f7e018"}
+            />
+          </button>
         </div>
 
         <ul

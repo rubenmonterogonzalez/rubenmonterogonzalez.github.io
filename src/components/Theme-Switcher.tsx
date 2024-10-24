@@ -11,7 +11,7 @@ export function ThemeSwitcher() {
   };
 
   return (
-    <div className="relative w-14 h-8 p-[0.1rem] cursor-pointer">
+    <div className="relative w-14 h-8 p-[0.1rem] cursor-pointer sm:ml-4 flex">
       <button
         onClick={toggleTheme}
         aria-label='Toggle theme'
